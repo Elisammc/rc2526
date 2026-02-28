@@ -5,8 +5,9 @@ num_elem(+Lista, -Resultado)
 Principio de Inducción
 1) num_elem(n0, 0). n0 en listas es []
 2) num_elem(n-1) -> num_elem(n).
+
+Cuando no utilizamos una variable pero la necesitamos, la ponemos como _
 */
 
 num_elem([],0).
-num_elem([Cabeza|Resto], R2) :- num_elem(Resto,R), R2 is R + 1.
-
+num_elem([_|Resto], R2) :- num_elem(Resto,R), R2 is R + 1.
